@@ -20,7 +20,13 @@ body {
     position: relative;
     z-index: 101;
 }
-
+.header-logo {
+    display: flex;
+    align-items: center; /* Центрує елементи по вертикалі */
+    justify-content: center; /* Центрує елементи по горизонталі */
+    gap: 10px; /* Додає відступ між логотипом та текстом */
+    /* Ви можете прибрати цей рядок, якщо не потрібен відступ */
+}
 .header-content {
     display: flex;
     justify-content: space-between;
