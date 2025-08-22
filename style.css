@@ -1,0 +1,1303 @@
+:root {
+    --dark-bg: #1a1a1a;
+    --text-color: #ffffff;
+    --highlight-color: #aaff00;
+    --card-bg: #ffffff;
+    --card-border: #e0e0e0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+/* -------------------- Хедер (оновлені стилі) -------------------- */
+.header {
+    background-color: var(--dark-bg);
+    padding: 20px 50px;
+    position: relative;
+    z-index: 101;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header-logo a {
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.header-socials a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 15px;
+}
+
+/* -------------------- Стилі для кнопки "menu" -------------------- */
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-text {
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: lowercase; /* Усі літери малими */
+}
+
+.menu-text .menu-word {
+    color: var(--text-color); /* Білий колір для "menu" */
+    transition: color 0.3s;
+}
+
+.menu-text .menu-dot {
+    color: var(--highlight-color); /* Зелений колір для крапки */
+    transition: color 0.3s;
+}
+
+.menu-toggle:hover .menu-word {
+    color: var(--highlight-color); /* Зміна кольору тексту при наведенні */
+}
+
+.menu-toggle:hover .menu-dot {
+    color: var(--text-color); /* Зміна кольору крапки при наведенні */
+}
+
+/* -------------------- Інші стилі залишаються без змін -------------------- */
+.menu-toggle svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-toggle svg .bar {
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.open .bar-1 {
+    transform: rotate(45deg) translate(2.5px, 6px);
+}
+
+.menu-toggle.open .bar-2 {
+    opacity: 0;
+}
+
+.menu-toggle.open .bar-3 {
+    transform: rotate(-45deg) translate(2.5px, -6px);
+}
+/* Приховуємо кнопку закриття в панелі, оскільки тепер основна кнопка виконує цю функцію */
+.menu-close {
+    display: none;
+}
+
+/* -------------------- Стилі для панелі меню -------------------- */
+.menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #2C2B38 0%, #7C799E 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu-panel.active {
+    transform: translateX(0);
+}
+
+.menu-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-navigation li {
+    margin: 20px 0;
+}
+
+.menu-navigation a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.menu-navigation a:hover {
+    color: var(--highlight-color);
+}
+
+
+
+/* -------------------- Hero Секція -------------------- */
+.hero-section {
+    position: relative;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 50px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/hero-section.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 50%;
+    padding-right: 50px;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 80%;
+}
+
+.hero-cta-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--highlight-color);
+    color: var(--dark-bg);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 30px;
+    transition: transform 0.3s;
+}
+
+.hero-cta-button:hover {
+    transform: scale(1.05);
+}
+
+.hero-cta-button svg {
+    margin-left: 10px;
+    color: var(--dark-bg);
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('your-hero-svg-or-image.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+/* -------------------- Секція "Our capabilities" -------------------- */
+.capabilities-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 100px 50px;
+    background-color: #f7f7f7;
+    color: #000;
+}
+
+.capabilities-text-block {
+    flex: 1;
+    max-width: 400px;
+}
+
+.capabilities-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.capabilities-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin-top: 20px;
+}
+
+.capabilities-grid {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 45px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-highlighted {
+    background-color: var(--highlight-color);
+    color: var(--dark-bg);
+}
+
+/* Стилі для SVG-стрілки */
+.card-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-arrow svg {
+    width: 100%;
+    height: 100%;
+}
+
+.card-arrow svg path {
+    stroke-width: 2; /* Товщина стрілки */
+    stroke: #000; /* Колір за замовчуванням */
+    transition: stroke 0.3s ease-in-out;
+}
+
+/* Стилі для стрілки в темній картці */
+.card-highlighted .card-arrow svg path {
+    stroke: var(--dark-bg);
+}
+
+/* Анімація при наведенні на картку */
+.card:hover .card-arrow {
+    transform: scale(1.1);
+}
+
+.card p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: inherit;
+}
+
+/* -------------------- Секція "In which areas of activity" -------------------- */
+.areas-section {
+    background-color: var(--card-bg);
+    color: var(--dark-bg);
+    padding: 100px 50px;
+}
+
+.areas-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.areas-content-container::before,
+.areas-content-container::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+.areas-content-container::before {
+    background-image: url('assets/areas-image-bg-left.png');
+    width: 400px;
+    height: 400px;
+    top: -150px;
+    left: -150px;
+    opacity: 0.1;
+}
+
+.areas-content-container::after {
+    background-image: url('assets/areas-image-bg-right.png');
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -100px;
+    opacity: 0.1;
+}
+
+.areas-text-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.areas-text-block h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    z-index: 1;
+}
+
+.areas-text-block p {
+    font-size: 16px;
+    color: #555;
+    max-width: 70%;
+    z-index: 1;
+}
+
+.areas-image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 600px;
+    background-image: url('assets/areas-image.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.areas-list-block {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.areas-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.areas-list li {
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    counter-increment: list-counter;
+}
+
+.areas-list li::before {
+    content: "0" counter(list-counter) ".";
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 15px;
+    color: #000;
+}
+
+.areas-list li:first-child::before,
+.areas-list li:nth-child(2)::before {
+    font-size: 24px;
+}
+
+.list-item-content {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.list-item-content h4 {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+}
+
+.list-item-content p {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0 0;
+}
+
+.areas-list li:last-child {
+    border-bottom: none;
+}
+
+/* -------------------- Секція "In which industries" (ОПТИМІЗОВАНІ СТИЛІ) -------------------- */
+.industries-section {
+    padding: 100px 50px;
+    background-color: #f7f7f7;
+    color: var(--dark-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.industries-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -200px;
+    width: 800px;
+    height: 800px;
+    background-image: url('assets/industries-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.industries-content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.industries-header-block {
+    flex-shrink: 0;
+    flex-basis: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.industries-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--dark-bg);
+}
+
+.industries-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+    max-width: 300px;
+}
+
+.industries-line {
+    width: 300px;
+    height: 1px;
+    background-color: #000;
+    margin: 20px 0;
+}
+
+/* -------------------- Стилі для слайдера -------------------- */
+.industries-controls {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+
+.slider-button {
+    background: transparent;
+    border: 1px solid var(--dark-bg);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-button svg {
+    color: var(--dark-bg);
+    width: 20px;
+    height: 20px;
+}
+
+.trends-prev-button svg {
+    transform: rotate(180deg);
+}
+
+.slider-button:hover {
+    background-color: var(--dark-bg);
+}
+
+.slider-button:hover svg {
+    color: var(--text-color);
+}
+
+.industries-slider-container {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    flex-basis: 750px;
+    padding-bottom: 20px;
+    margin-top: 0;
+}
+
+.industries-slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.industries-slider-track {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.industries-column {
+    flex-shrink: 0;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.industry-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.industries-column .industry-item:last-child {
+    border-bottom: none;
+}
+
+.industry-item p {
+    margin: 0;
+    font-weight: 500;
+    color: var(--dark-bg);
+}
+
+.card-arrow {
+    font-size: 24px;
+    line-height: 1;
+    color: var(--dark-bg);
+    opacity: 0.5;
+}
+
+/* -------------------- Секція "Technologies and Innovations" -------------------- */
+.trends-section {
+    padding: 100px 50px;
+    background-color: var(--card-bg);
+    color: var(--dark-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.trends-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    background-image: url('assets/trends-background-gradient.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 150px;
+}
+
+.trends-content-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.trends-main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.trends-text-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+}
+
+.trends-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.highlight {
+    background-image: url('assets/line.png');
+    background-position: 10px 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5px 15px;
+    line-height: 1.2;
+}
+
+.trends-title .highlight {
+    background-image: url('assets/line.png');
+    background-position: 10px 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5px 15px;
+    line-height: 1.2;
+}
+
+.trends-line {
+    width: 300px;
+    height: 1px;
+    background-color: #000;
+    margin: 20px 0;
+    margin-left: 400px;
+}
+
+.trends-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+    max-width: 300px;
+    margin-left: 400px;
+}
+
+.trends-controls {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+}
+
+.slider-button {
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.slider-button svg {
+    color: #ccc;
+    width: 20px;
+    height: 20px;
+    transition: color 0.3s;
+}
+
+.trends-prev-button svg {
+    transform: rotate(180deg);
+}
+
+.trends-next-button svg {
+    transform: rotate(0deg);
+}
+
+.slider-button:hover {
+    background-color: var(--dark-bg);
+    border-color: var(--dark-bg);
+}
+
+.slider-button:hover svg {
+    color: var(--card-bg);
+}
+
+.trends-slider-container {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    padding-bottom: 40px;
+    margin-left: 400px;
+}
+
+.trends-slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.trends-slider-track {
+    display: flex;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.trends-card {
+    flex-shrink: 0;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trends-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.trends-card h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-date {
+    font-size: 14px;
+    color: #777;
+}
+
+.card-topic {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    background-color: var(--highlight-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.view-all-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: var(--dark-bg);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    margin-top: 40px;
+    width: 200px;
+}
+
+.view-all-button:hover {
+    background-color: var(--dark-bg);
+    color: var(--card-bg);
+    border-color: var(--dark-bg);
+}
+
+.view-all-button svg {
+    margin-left: 10px;
+    color: var(--dark-bg);
+    transition: color 0.3s;
+}
+
+.view-all-button:hover svg {
+    color: var(--card-bg);
+}
+
+/* -------------------- Футер -------------------- */
+.footer {
+    background: linear-gradient(135deg, #2C2B38 0%, #7C799E 100%);
+    color: var(--text-color);
+    padding: 50px 50px 20px;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.footer-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 30px;
+    font-weight: 500;
+}
+
+.footer-cta-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--highlight-color);
+    color: var(--dark-bg);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s;
+}
+
+.footer-cta-button:hover {
+    transform: scale(1.05);
+}
+
+.footer-cta-button svg {
+    margin-left: 10px;
+    color: var(--dark-bg);
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-contacts {
+    display: flex;
+    gap: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.contact-item .contact-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.contact-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-socials a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.footer-socials a:hover {
+    opacity: 1;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+}
+
+/* ==================== АДАПТАЦІЯ ДЛЯ МЕНШИХ ЕКРАНІВ ==================== */
+@media (min-width: 1201px) {
+    .header-content {
+        justify-content: space-between;
+    }
+    
+    .header-socials {
+        display: block; /* Показуємо на десктопах */
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+}
+@media (max-width: 1200px) {
+    /* -------------------- Загальні стилі -------------------- */
+    .header,
+    .hero-section,
+    .capabilities-section,
+    .areas-section,
+    .industries-section,
+    .trends-section,
+    .footer {
+        padding: 20px 30px;
+    }
+/* -------------------- Адаптивність -------------------- */
+@media (max-width: 768px) {
+    .header-menu {
+        display: none; /* Приховуємо стандартне меню */
+        position: absolute;
+        top: 60px; /* Відступ від хедера */
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-bg);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .header {
+        padding: 20px;
+    }
+
+    .header-menu.active {
+        display: flex; /* Показуємо при активному класі */
+    }
+
+    .header-menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-menu li {
+        margin: 0;
+    }
+    
+    .header-menu a {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    .header-socials {
+        display: none; /* Приховуємо соціальні іконки на мобільних */
+    }
+
+    .menu-toggle {
+        display: flex; /* Показуємо бургер */
+    }
+}
+/* ==================== Адаптація для десктопів ==================== */
+
+@media (min-width: 1201px) {
+    .menu-toggle {
+        display: none; /* Приховуємо бургер на десктопах */
+    }
+
+    .header-menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        transition: none;
+    }
+    
+    .header-menu ul {
+        display: flex;
+        gap: 30px;
+    }
+
+    .header-menu li {
+        margin: 0;
+    }
+    
+    .header-menu a {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .header-socials {
+        display: block; /* Показуємо соціальні іконки */
+    }
+    
+    .header-socials a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-left: 15px;
+    }
+}
+    /* -------------------- Hero Секція -------------------- */
+    .hero-title {
+        font-size: 48px;
+    }
+
+    /* -------------------- Capabilities Секція -------------------- */
+    .capabilities-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .capabilities-text-block {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .capabilities-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    /* -------------------- Areas Секція -------------------- */
+    .areas-content-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .areas-text-block h2 {
+        font-size: 36px;
+    }
+
+    .areas-text-block p {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .areas-content-container::before,
+    .areas-content-container::after {
+        display: none;
+    }
+
+    /* -------------------- Industries Секція -------------------- */
+    .industries-content-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .industries-header-block {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .industries-slider-container {
+        width: 100%;
+        flex-basis: auto;
+        padding-bottom: 0;
+    }
+    
+    /* -------------------- Trends Секція -------------------- */
+    .trends-main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+
+    .trends-text-block {
+        max-width: 100%;
+    }
+
+    .trends-title {
+        font-size: 48px;
+    }
+
+    .trends-line,
+    .trends-description,
+    .trends-slider-container {
+        margin-left: 0;
+    }
+    
+    .trends-slider-track {
+        gap: 20px;
+    }
+
+    /* -------------------- Футер -------------------- */
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-nav a {
+        margin: 0 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-contacts {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* -------------------- Загальні стилі -------------------- */
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    /* -------------------- Хедер -------------------- */
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .menu-close {
+        top: 20px;
+        right: 20px;
+    }
+    .header-menu,
+    .header-socials {
+        display: none; /* Приховуємо меню та іконки для мобільних */
+    }
+
+    /* -------------------- Hero Секція -------------------- */
+    .hero-section {
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        max-width: 100%;
+    }
+    
+    .hero-image {
+        display: none; /* Приховуємо зображення для мобільних */
+    }
+
+    /* -------------------- Capabilities Секція -------------------- */
+    .capabilities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .capabilities-title {
+        font-size: 28px;
+    }
+
+    /* -------------------- Areas Секція -------------------- */
+    .areas-text-block h2 {
+        font-size: 28px;
+    }
+
+    /* -------------------- Industries Секція -------------------- */
+    .industries-title {
+        font-size: 32px;
+    }
+    
+    .industries-line {
+        width: 100%;
+    }
+    
+    .industries-description {
+        max-width: 100%;
+    }
+    
+    .industries-controls {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .industries-column {
+        width: 100%;
+    }
+
+    /* -------------------- Trends Секція -------------------- */
+    .trends-title {
+        font-size: 32px;
+    }
+
+    .trends-controls {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .trends-card {
+        width: 300px;
+        padding: 40px 20px;
+    }
+
+    .trends-card h3 {
+        font-size: 20px;
+    }
+    
+    /* -------------------- Футер -------------------- */
+    .footer-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-nav,
+    .footer-socials {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-nav a,
+    .footer-socials a {
+        margin: 5px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
