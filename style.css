@@ -501,7 +501,6 @@ body {
 
 .industries-header-block {
     flex-shrink: 0;
-    flex-basis: 350px;
     display: flex;
     flex-direction: column;
 }
@@ -575,7 +574,6 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: grab;
-    flex-basis: 750px;
     padding-bottom: 20px;
     margin-top: 0;
 }
