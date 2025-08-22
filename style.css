@@ -1192,18 +1192,23 @@ body {
 
     /* -------------------- Хедер -------------------- */
     .header-content {
-        flex-direction: column;
-        gap: 15px;
+        display: flex; /* Важливо: додайте display: flex, якщо він не встановлений */
+        flex-direction: row; /* Розміщуємо елементи в один рядок */
+        justify-content: space-between; /* Розсовує елементи по краях */
+        align-items: center; /* Центрує їх по вертикалі */
+        gap: 15px; /* Залишаємо відступ, якщо потрібно */
     }
-    .menu-close {
-        top: 20px;
-        right: 20px;
-    }
+
     .header-menu,
     .header-socials {
         display: none; /* Приховуємо меню та іконки для мобільних */
     }
 
+    .menu-close {
+        top: 20px;
+        right: 20px;
+    }
+  
     /* -------------------- Hero Секція -------------------- */
     .hero-section {
         height: auto;
