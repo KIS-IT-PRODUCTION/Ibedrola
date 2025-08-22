@@ -559,7 +559,9 @@ body {
 .trends-prev-button svg {
     transform: rotate(180deg);
 }
-
+.trends-prev-button-second svg {
+    transform: rotate(180deg);
+}
 .slider-button:hover {
     background-color: var(--dark-bg);
 }

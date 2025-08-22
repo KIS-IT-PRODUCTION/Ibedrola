@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Логіка для другого слайдера "Technologies and Innovations"
+// Логіка для другого слайдера "Technologies and Innovations"
     const trendsSliderContainer = document.querySelector('.trends-slider-container');
     const trendsNextButton = document.querySelector('.trends-next-button-second');
     const trendsPrevButton = document.querySelector('.trends-prev-button-second');
@@ -80,5 +80,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
 });
