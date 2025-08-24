@@ -10,240 +10,242 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    </body>
-</html>
 
+<section class="hero-section">
     <header class="header">
-        <div class="header-content">
-            <button class="menu-toggle" aria-label="Toggle navigation menu">
-                
-                <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="bar bar-1" d="M1 1.5H21" stroke="#AAFF00" stroke-width="2" stroke-linecap="round"/>
-                    <path class="bar bar-2" d="M1 7.5H21" stroke="#AAFF00" stroke-width="2" stroke-linecap="round"/>
-                    <path class="bar bar-3" d="M1 13.5H21" stroke="#AAFF00" stroke-width="2" stroke-linecap="round"/>
-                </svg><div class="menu-text">
-                    <span class="menu-word">menu</span><span class="menu-dot">.</span>
+    <div class="header-content">
+       <button class="menu-toggle" aria-label="Toggle navigation menu">
+           <svg class="open-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <line class="bar bar-1" y1="7.5" y2="7.5" x2="100" stroke="#AAFF00" stroke-width="2" stroke-linecap="round"/>
+               <line class="bar bar-2" y1="16.5" y2="16.5" x2="22" stroke="#AAFF00" stroke-width="2" stroke-linecap="round"/>
+           </svg>
+           <img class="close-icon" src="assets/close.svg" alt="">
+           <div class="menu-text">
+               <span class="menu-word">menu</span><span class="menu-dot">.</span>
+               <span class="close-text">menu.</span>
+           </div>
+       </button>
+        <div class="header-logo">
+            <img src="assets/logo.svg" alt="Iberdrola Logo">
+            <a href="#">iberdrola</a>
+        </div>
+        <div class="header-languages">
+            <a href="#">EN.</a>
+            <a href="#">RU.</a>
+            <a href="#">UA.</a>
+        </div>
+        <div class="header-socials">
+            <a href="#"><img src="assets/Social Icons.svg" alt="X icon"></a>
+            <a href="#"><img src="assets/facebook.svg" alt="F icon"></a>
+            <a href="#"><img src="assets/linkdin.svg" alt="in icon"></a>
+        </div>
+    </div>
+    <div class="menu-panel">
+        <div class="menu-panel-content">
+            <nav class="menu-navigation">
+                <ul>
+                    <li><a href="#">main.</a></li>
+                    <li><a href="#">services.</a></li>
+                    <li><a href="#">industry solutions.</a></li>
+                    <li><a href="#">cases.</a></li>
+                    <li><a href="#">contacts.</a></li>
+                </ul>
+            </nav>
+            <div class="menu-panel-bottom">
+                <a href="#" class="button-cta">
+                    <span class="cta-text">
+                        <span class="cta-call">Call Me</span>
+                        <span class="cta-back">Back</span>
+                    </span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 5L19 12L12 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <div class="menu-panel-contacts">
+                    <div class="contact-item">
+                        <img src="assets/email.svg" alt="Email icon">
+                        <a href="mailto:hello@iberdrola.com">hello@iberdrola.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/tel.svg" alt="Phone icon">
+                        <a href="tel:+112345232309">+1 12345 23 2309</a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/map.svg" alt="Location icon">
+                        <a href="#">Somewhere in the World</a>
+                    </div>
                 </div>
-            </button>
-            
-            <div class="header-logo">
-                <img src="assets/logo.svg" alt="">
-                <a href="#">iberdrola</a>
-            </div>
-            
-            <div class="header-socials">
-                <a href="#"> <img src="assets/Social Icons.svg" alt=""></a>
-                <a href="#"><img src="assets/facebook.svg" alt=""></a>
-                <a href="#"><img src="assets/linkdin.svg" alt=""></a>
             </div>
         </div>
-    </header>
-
-    <div class="menu-panel">
-        <button class="menu-close" aria-label="Close menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M6 6L18 18" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-        <nav class="menu-navigation">
-            <ul>
-                <li><a href="#">home.</a></li>
-                <li><a href="#">services.</a></li>
-                <li><a href="#">industry solutions.</a></li>
-                <li><a href="#">blog.</a></li>
-                <li><a href="#">contact.</a></li>
-            </ul>
-        </nav>
     </div>
+</header>
+    <div class="hero-content">
+        <h1 class="hero-title">
+            technologies for <span class="highlight">optimizing</span> your processes<span class="highlight">.</span>
+        </h1>
+        <p class="hero-subtitle">
+            We develop applications and services, optimizing processes and increasing efficiency in the technological world.
+        </p>
+          <a href="#" class="button-cta">
+                    <span class="cta-text">
+                        <span class="cta-call">Call Me</span>
+                        <span class="cta-back">Back</span>
+                    </span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 5L19 12L12 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+    </div>
+    <div class="hero-image">
+    </div>
+</section>
 
-
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                technologies for <span class="highlight">optimizing</span> your <span class="highlight">processes.</span>
-            </h1>
-            <p class="hero-subtitle">
-                We develop applications and services, optimizing processes and increasing efficiency in the technological world.
+ 
+<section class="capabilities-section">
+    <div class="capabilities-grid">
+        <div class="capabilities-header">
+            <h2 class="capabilities-title">
+                Our capabilities: <br>solutions <span class="highlight"><b>for any</b></span> tasks
+            </h2>
+        </div>
+        <div class="capabilities-info">
+            <div class="line"></div>
+            <p class="capabilities-description">
+                We can develop and support various applications and services. Here are the main types of applications and tasks that we can implement:
             </p>
-            <a href="#" class="hero-cta-button">
-                <span>Call Me Back</span>
+        </div>
+        <div class="icon">
+            <img class="vector" src="assets/arrow.svg" />
+            <div class="text-wrapper">web applications.</div>
+        </div>
+        <div class="icon">
+            <img class="vector" src="assets/arrow.svg" />
+            <div class="text-wrapper">chatbots and integrations with external apis.</div>
+        </div>
+         <div class="icon">
+            <img class="vector" src="assets/arrow.svg" />
+            <div class="text-wrapper">api services.</div>
+        </div>
+        <div class="icon">
+            <img class="vector" src="assets/arrow.svg" />
+            <div class="text-wrapper">automation scripts.</div>
+        </div>
+        <div class="icon icon-highlighted">
+            <img class="vector" src="assets/arrow.svg" />
+            <p class="text-wrapper">data parsers <br />and web scraping.</p>
+        </div>
+        <div class="icon">
+            <img class="vector" src="assets/arrow.svg" />
+            <div class="text-wrapper">data processing.</div>
+        </div>
+        <div class="icon">
+            <img class="vector" src="assets/arrow.svg" />
+            <div class="text-wrapper">mobile applications.</div>
+        </div>
+        <div class="icon icon-highlighted">
+            <img class="vector" src="assets/arrow.svg" />
+            <div class="text-wrapper">ci/cd testing <br />and development.</div>
+        </div>
+        <div class="icon">
+            <img class="vector" src="assets/arrow.svg" />
+            <div class="text-wrapper">command-line utilities.</div>
+        </div>
+         <div class="icon">
+            <img class="vector" src="assets/arrow.svg" />
+            <div class="text-wrapper">e-commerce.</div>
+        </div>
+    </div>
+</section>
+
+<section class="areas-section">
+    <div class="areas-content-wrapper">
+        <div class="areas-text-block">
+            <h2 class="areas-title">
+                In which areas of activity <br>
+                <span class="highlight"><b>can we be</b> </span> in demand?
+            </h2>
+            <div class="description-container">
+                <p class="areas-description">
+                    We can implement a wide range of solutions, from small utilities to large commercial platforms.
+                </p>
+            </div>
+        </div>
+        <div class="areas-list-block">
+            <ol class="areas-list">
+                <li>
+                    <div class="list-item-content">
+                        <h4>e-commerce.</h4>
+                        <p>Marketplaces, online stores</p>
+                    </div>
+                    <div class="list-icon">
+                        <img src="assets/Icon.svg" alt="E-commerce icon">
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item-content">
+                        <h4>startups.</h4>
+                        <p>Rapid prototyping and MVP development</p>
+                    </div>
+                    <div class="list-icon">
+                        <img src="assets/Vector.svg" alt="Startups icon">
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item-content">
+                        <h4>corporate solutions.</h4>
+                        <p>CRM, ERP systems</p>
+                    </div>
+                    <div class="list-icon">
+                        <img src="assets/Subtract.svg" alt="Corporate solutions icon">
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item-content">
+                        <h4>saas platforms.</h4>
+                        <p>Software as a service</p>
+                    </div>
+                    <div class="list-icon">
+                        <img src="assets/Union.svg" alt="SaaS platforms icon">
+                    </div>
+                </li>
+            </ol>
+            <a href="#" class="button-cta">
+                <span class="cta-text">
+                    <span class="cta-call">Call Me</span>
+                    <span class="cta-back">Back</span>
+                </span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.9599 4.29822L19.4998 10.8381C20.2798 11.6181 20.2798 12.8781 19.4998 13.6581L12.9599 20.1981" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M4.5 12.248H19.29" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 12H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 5L19 12L12 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
         </div>
-        <div class="hero-image">
-            </div>
-    </section>
-
-  <section class="capabilities-section">
-    <div class="capabilities-text-block">
-        <h2 class="capabilities-title">
-            Our capabilities: <br>solutions <span class="highlight">for any tasks</span>
-        </h2>
-        <p class="capabilities-description">
-            We can develop and support various applications and services. Here are the main types of applications and tasks that we can implement:
-        </p>
     </div>
-    <div class="capabilities-grid">
-        <div class="card">
-            <span class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </span>
-            <p>web applications.</p>
-        </div>
-        <div class="card">
-            <span class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </span>
-            <p>chatbots and integrations with external apis.</p>
-        </div>
-        <div class="card">
-            <span class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </span>
-            <p>api services.</p>
-        </div>
-        <div class="card">
-            <span class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </span>
-            <p>Automation scripts.</p>
-        </div>
-        <div class="card">
-            <span class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </span>
-            <p>Data parsers 
-and web scraping.</p>
-        </div>
-
-        <div class="card">
-            <span class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </span>
-            <p>Data processing.</p>
-        </div>
-
-        <div class="card">
-            <span class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </span>
-            <p>Mobile applications.</p>
-        </div>
-         <div class="card">
-            <span class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </span>
-            <p>CI/CD testing 
-and development.</p>
-        </div>
-         <div class="card">
-            <span class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </span>
-            <p>Command-line utilities.</p>
-        </div>
-        </div>
 </section>
-<section class="areas-section">
-        <div class="areas-content-container">
-            <div class="areas-text-block">
-                <h2>
-                    In which areas of activity <br>
-                    <span class="highlight">can we be in demand?</span>
-                </h2>
-                <p>
-                    We can implement a wide range of solutions, from small utilities to large commercial platforms.
-                </p>
-                <div class="areas-image">
-                    </div>
-            </div>
-            <div class="areas-list-block">
-                <ol class="areas-list">
-                    <li>
-                        <div class="list-item-content">
-                            <h4>e-commerce.</h4>
-                            <p>Marketplaces, online stores</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="list-item-content">
-                            <h4>startups.</h4>
-                            <p>Rapid prototyping and MVP development</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="list-item-content">
-                            <h4>corporate solutions.</h4>
-                            <p>CRM, ERP systems</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="list-item-content">
-                            <h4>saas platforms.</h4>
-                            <p>Software as a service</p>
-                        </div>
-                    </li>
-                </ol>
-                <a href="#" class="hero-cta-button">
-                    <span>Call Me Back</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.9599 4.29822L19.4998 10.8381C20.2798 11.6181 20.2798 12.8781 19.4998 13.6581L12.9599 20.1981" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M4.5 12.248H19.29" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
 
 <section class="industries-section">
     <div class="industries-content-wrapper">
         <div class="industries-header-block">
-            <h2 class="industries-title">
-                In which industries <br>
-                are we <span class="highlight">competent</span>?
-            </h2>
-          <div class="industries-line"></div>   <p class="industries-description">
-                We can offer a bunch of different solutions, from simple utilities to large commercial platforms.
-            </p>
+            <div class="industries-title-container">
+                <h2 class="industries-title">
+                    In which industries <br>
+                    are we <span class="highlight"><b>competent</b></span>?
+                </h2><div class="industries-line"></div>
+                <p class="industries-description">
+                    We can offer a bunch of different solutions, from simple utilities to large commercial platforms.
+                </p>
+            </div>
+            
             <div class="industries-controls">
-                <button class="slider-button trends-prev-button">
+                <button class="slider-button1 trends-prev-button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12.9599 4.29822L19.4998 10.8381C20.2798 11.6181 20.2798 12.8781 19.4998 13.6581L12.9599 20.1981" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M4.5 12.248H19.29" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
-                <button class="slider-button trends-next-button">
+                <button class="slider-button2 trends-next-button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12.9599 4.29822L19.4998 10.8381C20.2798 11.6181 20.2798 12.8781 19.4998 13.6581L12.9599 20.1981" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M4.5 12.248H19.29" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -426,13 +428,13 @@ and development.</p>
         </p>
     </div>
     <div class="trends-controls">
-        <button class="slider-button trends-prev-button-second">
+        <button class="slider-button1 trends-prev-button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12.9599 4.29822L19.4998 10.8381C20.2798 11.6181 20.2798 12.8781 19.4998 13.6581L12.9599 20.1981" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M4.5 12.248H19.29" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
-         <button class="slider-button trends-next-button-second">
+                <button class="slider-button2 trends-next-button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12.9599 4.29822L19.4998 10.8381C20.2798 11.6181 20.2798 12.8781 19.4998 13.6581L12.9599 20.1981" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M4.5 12.248H19.29" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -491,7 +493,11 @@ and development.</p>
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-top">
-            <a href="#" class="footer-logo">iberdrola</a>
+            
+           <div class="header-logo">
+            <img src="assets/logo.svg" alt="Iberdrola Logo">
+            <a href="#">iberdrola</a>
+        </div>
             <nav class="footer-nav">
                 <a href="#">home.</a>
                 <a href="#">services.</a>
@@ -499,27 +505,30 @@ and development.</p>
                 <a href="#">blog.</a>
                 <a href="#">contact.</a>
             </nav>
-            <a href="#" class="footer-cta-button">
-                <span>Call Me Back</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.9599 4.29822L19.4998 10.8381C20.2798 11.6181 20.2798 12.8781 19.4998 13.6581L12.9599 20.1981" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M4.5 12.248H19.29" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
+           <a href="#" class="button-cta">
+                    <span class="cta-text">
+                        <span class="cta-call">Call Me</span>
+                        <span class="cta-back">Back</span>
+                    </span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 5L19 12L12 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
         </div>
         <hr class="footer-divider">
         <div class="footer-bottom">
             <div class="footer-contacts">
                 <div class="contact-item">
-                    <span class="contact-icon">📧</span>
+                    <img src="assets/footer/Icon.svg" alt="">
                     <a href="mailto:hello@iberdrola.com">hello@iberdrola.com</a>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-icon">📞</span>
-                    <a href="tel:+112346232309">+112346 23 2309</a>
+<img src="assets/footer/Vector (Stroke).svg" alt="">     
+               <a href="tel:+112346232309">+112346 23 2309</a>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-icon">📍</span>
+                    <img src="assets/footer/Subtract.svg" alt="">
                     <span>Somewhere in the World</span>
                 </div>
             </div>

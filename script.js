@@ -1,83 +1,55 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // Логіка для кнопки меню
+    // --- Меню-бургер ---
     const menuToggle = document.querySelector('.menu-toggle');
-    const menuWord = menuToggle.querySelector('.menu-word');
-    const menuDot = menuToggle.querySelector('.menu-dot');
     const menuPanel = document.querySelector('.menu-panel');
+    const header = document.querySelector('.header');
+    const body = document.body;
 
-    if (menuToggle && menuPanel && menuWord && menuDot) {
+    if (menuToggle && menuPanel && header) {
         menuToggle.addEventListener('click', () => {
-            const isMenuOpen = menuPanel.classList.contains('active');
-
-            if (isMenuOpen) {
-                menuPanel.classList.remove('active');
-                menuToggle.classList.remove('open');
-                menuWord.textContent = 'menu';
-                menuDot.textContent = '.';
-                document.body.style.overflow = '';
-            } else {
-                menuPanel.classList.add('active');
-                menuToggle.classList.add('open');
-                menuWord.textContent = 'close';
-                menuDot.textContent = '.';
-                document.body.style.overflow = 'hidden';
-            }
-        });
-
-        const menuLinks = menuPanel.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menuPanel.classList.remove('active');
-                menuToggle.classList.remove('open');
-                menuWord.textContent = 'menu';
-                menuDot.textContent = '.';
-                document.body.style.overflow = '';
-            });
+            const isMenuOpen = menuPanel.classList.toggle('active');
+            header.classList.toggle('menu-open', isMenuOpen);
+            menuToggle.classList.toggle('active', isMenuOpen);
+            body.classList.toggle('menu-open-body', isMenuOpen); // Використовуємо клас для блокування
         });
     }
 
-    // Логіка для першого слайдера "In which industries"
-    const industriesSliderContainer = document.querySelector('.industries-slider-container');
-    const industriesNextButton = document.querySelector('.trends-next-button');
-    const industriesPrevButton = document.querySelector('.trends-prev-button');
-    const industriesScrollAmount = 270;
+    // --- Універсальна логіка для всіх слайдерів ---
+    
+    // Знаходимо всі секції, які містять слайдери
+    const sliderSections = document.querySelectorAll('.industries-section, .trends-section');
 
-    if (industriesSliderContainer && industriesNextButton && industriesPrevButton) {
-        industriesNextButton.addEventListener('click', () => {
-            industriesSliderContainer.scrollBy({
-                left: industriesScrollAmount,
-                behavior: 'smooth'
+    // Проходимо по кожній секції зі слайдером
+    sliderSections.forEach(section => {
+        const sliderContainer = section.querySelector('.industries-slider-container, .trends-slider-container');
+        const nextButton = section.querySelector('.trends-next-button');
+        const prevButton = section.querySelector('.trends-prev-button');
+        
+        // Визначаємо величину прокрутки. Можна налаштувати для кожного слайдера окремо, якщо потрібно.
+        // Наприклад, перевіряючи, в якій секції ми знаходимось.
+        let scrollAmount = 300; // Значення за замовчуванням
+        if (section.classList.contains('trends-section')) {
+            scrollAmount = 400; // Для секції trends
+        } else if (section.classList.contains('industries-section')) {
+            scrollAmount = 270; // Для секції industries
+        }
+
+        if (sliderContainer && nextButton && prevButton) {
+            // Обробник для кнопки "вперед"
+            nextButton.addEventListener('click', () => {
+                sliderContainer.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
             });
-        });
 
-        industriesPrevButton.addEventListener('click', () => {
-            industriesSliderContainer.scrollBy({
-                left: -industriesScrollAmount,
-                behavior: 'smooth'
+            // Обробник для кнопки "назад"
+            prevButton.addEventListener('click', () => {
+                sliderContainer.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
             });
-        });
-    }
-
-// Логіка для другого слайдера "Technologies and Innovations"
-    const trendsSliderContainer = document.querySelector('.trends-slider-container');
-    const trendsNextButton = document.querySelector('.trends-next-button-second');
-    const trendsPrevButton = document.querySelector('.trends-prev-button-second');
-    const trendsScrollAmount = 400;
-
-    if (trendsSliderContainer && trendsNextButton && trendsPrevButton) {
-        trendsNextButton.addEventListener('click', () => {
-            trendsSliderContainer.scrollBy({
-                left: trendsScrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        trendsPrevButton.addEventListener('click', () => {
-            trendsSliderContainer.scrollBy({
-                left: -trendsScrollAmount,
-                behavior: 'smooth'
-            });
-        });
-    }
+        }
+    });
 });
