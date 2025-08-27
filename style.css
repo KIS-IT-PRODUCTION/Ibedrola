@@ -951,6 +951,7 @@ padding: 0;
 margin: 0;
 
 counter-reset: list-counter;
+    margin-right: -100px;
 
 }
 
