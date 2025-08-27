@@ -874,13 +874,10 @@ margin: 0;
 
 
 .areas-title .highlight {
-    background-image: url('assets/line.png');
-    background-position-x:  -40px;
-    border-radius: 100
-    0px;
-    background-size: cover;
+    background-image: url('assets/line2.svg');
+    background-position: 10px 20px;
     background-repeat: no-repeat;
-    padding: 0 5px;
+    background-position: 46px;
 
 }
 
