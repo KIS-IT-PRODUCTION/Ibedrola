@@ -607,7 +607,7 @@ display: grid
     grid-row: 1 / 2;
     display: flex;
     align-items: center;
-    padding-right: 124px;
+    padding-right: 100px;
     box-sizing: border-box;
 }
 
@@ -924,7 +924,7 @@ top: 0;
 
 left: 0;
 
-width: 250px;
+width: 300px;
 
 height: 1px;
 
@@ -1313,6 +1313,7 @@ border-radius: 0px 0px 0px 24px;    width: 48px;
     }
 }
 /* -------------------- Секція "Technologies and Innovations" -------------------- */
+
 .trends-section {
     background-color: #F6F8FB;
     color: var(--dark-bg);
@@ -1323,7 +1324,7 @@ border-radius: 0px 0px 0px 24px;    width: 48px;
 }
 
 .trends-section::before {
-content: '';
+    content: '';
     position: absolute;
     width: 400px;
     height: 765px;
@@ -1342,11 +1343,10 @@ content: '';
 }
 
 .trends-main-header {
-display: flex
-;
+    display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 50px 0px 50px 50px;
+    margin: 50px 0px 50px 0px;
 }
 
 .trends-text-block {
@@ -1357,18 +1357,10 @@ display: flex
 
 .trends-title {
     font-size: 56px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.2;
     margin: 0;
 }
-/* .highlight {
-    background-image: url('assets/line.png');
-    background-position: 10px 10px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 5px 15px;
-    line-height: 1.2;
-} */
 
 .trends-title .highlight {
     background-image: url('assets/line.png');
@@ -1468,12 +1460,14 @@ display: flex
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.3s, box-shadow 0.3s;
+    /* --- ЗМІНА 1: Додано рамку і оновлено transition --- */
+    border: 1px solid transparent; /* Додано рамку, спочатку прозору */
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* Додано border-color до анімації */
 }
 
 .trends-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    /* --- ЗМІНА 2: Колір рамки стає чорним при наведенні --- */
+    border-color: #000000;
 }
 
 .trends-card h3 {
@@ -1504,29 +1498,21 @@ display: flex
 }
 
 .view-all-button {
+    /* --- ЗМІНА 3: Очищено стилі та додано відступ зліва --- */
     display: flex;
     align-items: center;
-    justify-content: center;
-    justify-self: center;
-    background-color: 
-    #ffffff;
+    justify-content: space-between;
+    background-color: #ffffff;
     border: 1px solid #ccc;
-    color: var(--dark-bg);
-    padding: 15px 30px;
-    border-radius: 50px;
+    color: #000000;
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    margin-top: 40px;
-    width: 200px;
-     display: flex;
     width: 252px;
-    align-items: center;
-    justify-content: space-between;
     padding: 16px 32px;
     border-radius: 4px 32px 4px 32px;
-    text-decoration: none;
-    color: #000000;
+    margin-top: 40px;
+    margin-left: 400px; /* Додано, щоб змістити кнопку вліво */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .view-all-button:hover {
@@ -1544,7 +1530,6 @@ display: flex
 .view-all-button:hover svg {
     color: var(--card-bg);
 }
-
 /* -------------------- Футер -------------------- */
 .footer {
     background: linear-gradient(135deg, #2C2B38 0%, #7C799E 100%);
