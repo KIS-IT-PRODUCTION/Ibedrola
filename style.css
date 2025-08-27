@@ -591,14 +591,13 @@ margin: 220px 0px 0px 0px;}
 }
 
 .capabilities-grid {
-    display: grid;
-    /* Десктопна сітка на 5 колонок */
+display: grid
+;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: auto;
-    gap: 20px;
     max-width: 1400px;
     margin: 0 auto;
-    transform: scale(0.7);
+    transform: scale(0.95);
 }
 
 /* --- ВАШЕ УНІКАЛЬНЕ РОЗТАШУВАННЯ ДЛЯ ДЕСКТОПІВ --- */
