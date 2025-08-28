@@ -209,7 +209,7 @@ margin: 5px;}
     left: 0;
     width: 100%;
     background-color: #ffffff;
-    border-radius: 0 0 52px 52px;
+    border-radius: 0 0 32px 32px;
     box-sizing: border-box;
     z-index: 100;
     opacity: 0;
@@ -1287,7 +1287,7 @@ border-radius: 0px 0px 0px 24px;    width: 48px;
 
 .industry-item p {
     margin: 0;
-    font-weight: 500;
+    font-weight:600;
     color: var(--dark-bg);
 }
 
