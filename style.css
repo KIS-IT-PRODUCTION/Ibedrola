@@ -641,9 +641,8 @@ display: grid
     grid-row: 2 / 5;
 }
 .icon:nth-of-type(6) {
-    grid-column: 1 / 5; 
+    grid-column: 1 / 2; 
     grid-row: 5 / 6;
-    margin-left: 100px;
 }
 .icon:nth-of-type(7) {
     grid-column: 4 / 6;
@@ -1089,7 +1088,7 @@ height: 24px;
 stroke: #000;
 
 }
-/* -------------------- Секція "In which industries" (ПОВНИЙ ВИПРАВЛЕНИЙ КОД) -------------------- */
+/* -------------------- Секція "In which industries" (ОПТИМІЗОВАНІ СТИЛІ) -------------------- */
 .industries-section {
     padding: 100px 50px;
     color: var(--dark-bg);
@@ -1111,24 +1110,22 @@ stroke: #000;
 }
 
 .industries-content-wrapper {
-max-width: 1400px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     position: relative;
     z-index: 1;
-    justify-content: space-between;
-    flex-direction: row;
-    
 }
 
 .industries-header-block {
     display: flex;
     flex-direction: column;
     position: sticky;
-    top: 50px;
+    top: 50px; /* Або інше значення, яке підходить для вашого дизайну */
     z-index: 2;
     flex-shrink: 0;
-    margin-top: -90px;
 }
 
 .industries-title {
@@ -1137,8 +1134,6 @@ max-width: 1400px;
     line-height: 1.2;
     margin: 0;
     color: var(--dark-bg);
-        margin-bottom: 70px;
-
 }
 
 .industries-description {
@@ -1147,16 +1142,17 @@ max-width: 1400px;
     color: #555;
     margin-top: 15px;
     max-width: 300px;
-    margin-bottom: 50px;
 }
-
 .industries-title .highlight {
     background-image: url('assets/line.png');
+    background-size: 40px 40px;
+    border-radius: 100
+    0px;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0 5px;
-}
 
+}
 .industries-line {
     width: 300px;
     height: 1px;
@@ -1171,41 +1167,49 @@ max-width: 1400px;
     margin-top: 20px;
 }
 
-.industries-controls .slider-button1 {
-    background: #F6F8FB;
+.industries-controls .slider-button1  {
+background: #F6F8FB;
     border: 1px solid #F6F8FB;
-    border-radius: 0px 24px 0px 0px;
-    width: 48px;
+border-radius: 0px 24px 0px 0px;    width: 48px;
     height: 48px;
-    display: flex;
+    display: flex
+;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
-
-.industries-controls .slider-button2 {
-    background: #F6F8FB;
+.trends-controls .slider-button1  {
+background: #ffffff;
     border: 1px solid #F6F8FB;
-    border-radius: 0px 0px 0px 24px;
-    width: 48px;
+border-radius: 0px 24px 0px 0px;    width: 48px;
     height: 48px;
-    display: flex;
+    display: flex
+;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
-
-/* Примітка: Я залишив стилі для кнопок .trends-controls, оскільки вони були у вашому коді */
-.trends-controls .slider-button1,
-.trends-controls .slider-button2 {
-    background: #ffffff;
+.trends-controls .slider-button2  {
+background: #ffffff;
     border: 1px solid #F6F8FB;
-    border-radius: 0px 24px 0px 0px;
-    width: 48px;
+border-radius: 0px 24px 0px 0px;    width: 48px;
     height: 48px;
-    display: flex;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.industries-controls .slider-button2  {
+background: #F6F8FB;
+    border: 1px solid #F6F8FB;
+border-radius: 0px 0px 0px 24px;    width: 48px;
+    height: 48px;
+    display: flex
+;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -1223,7 +1227,9 @@ max-width: 1400px;
     transform: rotate(180deg);
 }
 
-.slider-button1:hover,
+.slider-button1:hover {
+    border-color: var(--dark-bg);
+}
 .slider-button2:hover {
     border-color: var(--dark-bg);
 }
@@ -1237,8 +1243,6 @@ max-width: 1400px;
     scrollbar-width: none;
     cursor: grab;
     padding-bottom: 20px;
-    flex-grow: 1; /* Дозволяє контейнеру зайняти вільний простір */
-    margin-left: -150px; /* Зміщує весь блок слайдера вліво */
 }
 
 .industries-slider-container::-webkit-scrollbar {
@@ -1249,13 +1253,12 @@ max-width: 1400px;
     display: flex;
     gap: 20px;
     padding: 0;
-margin-top: 100px;
-    padding-left: 150px; /* Компенсує негативний margin-left */
+    margin-top: 200px;
 }
 
 .industries-column {
     flex-shrink: 0;
-    width: 380px; /* Встановлено фіксовану ширину */
+    width: 45%;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -1271,7 +1274,7 @@ margin-top: 100px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 24px;
+    padding: 30px;
 }
 
 .industries-column .industry-item:last-child {
@@ -1289,6 +1292,25 @@ margin-top: 100px;
     line-height: 1;
     color: var(--dark-bg);
     opacity: 0.5;
+}
+
+@media (max-width: 1024px) {
+    .industries-content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .industries-header-block {
+        position: static;
+    }
+
+    .industries-slider-track {
+        padding-left: 0;
+    }
+
+    .industries-column {
+        width: 100%;
+    }
 }
 /* -------------------- Секція "Technologies and Innovations" -------------------- */
 .trends-section {
@@ -1527,12 +1549,13 @@ display: flex
 .footer {
     background: linear-gradient(135deg, #2C2B38 0%, #7C799E 100%);
     color: var(--text-color);
-    padding: 50px 30px 20px;
+    padding: 50px 50px 20px;
 }
 
-/* .footer-container {
-
-} */
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
 .footer-top {
     display: flex;

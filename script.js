@@ -1,18 +1,43 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // --- Меню-бургер ---
+document.addEventListener('DOMContentLoaded', function () {
+    // --- Існуючий код для головного меню ---
     const menuToggle = document.querySelector('.menu-toggle');
     const menuPanel = document.querySelector('.menu-panel');
     const header = document.querySelector('.header');
+    const pageOverlay = document.querySelector('.page-overlay');
     const body = document.body;
 
-    if (menuToggle && menuPanel && header) {
-        menuToggle.addEventListener('click', () => {
-            const isMenuOpen = menuPanel.classList.toggle('active');
-            header.classList.toggle('menu-open', isMenuOpen);
-            menuToggle.classList.toggle('active', isMenuOpen);
-            body.classList.toggle('menu-open-body', isMenuOpen); // Використовуємо клас для блокування
+    menuToggle.addEventListener('click', function () {
+        this.classList.toggle('active');
+        menuPanel.classList.toggle('active');
+        header.classList.toggle('menu-open');
+        body.classList.toggle('menu-open');
+    });
+
+    pageOverlay.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        menuPanel.classList.remove('active');
+        header.classList.remove('menu-open');
+        body.classList.remove('menu-open');
+    });
+
+    // --- НОВИЙ КОД: логіка для випадаючих меню по кліку ---
+    const dropdownToggles = document.querySelectorAll('.menu-navigation .has-dropdown > a');
+
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(event) {
+            // Перевіряємо, чи ми на мобільному пристрої (де меню стає колонкою)
+            if (window.innerWidth <= 1024) {
+                // Забороняємо посиланню переходити за адресою
+                event.preventDefault();
+
+                // Знаходимо батьківський елемент <li>
+                const parentLi = this.parentElement;
+
+                // Перемикаємо клас 'open', щоб показати або приховати підменю
+                parentLi.classList.toggle('open');
+            }
         });
-    }
+    });
 
     // --- Універсальна логіка для всіх слайдерів ---
     
