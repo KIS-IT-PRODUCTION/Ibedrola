@@ -748,7 +748,7 @@ grid-column: 3 / 4;
 }
 
 .capabilities-title .highlight {
-    background-image: url('assets/line.png');
+background-image: url(assets/line.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -912,12 +912,12 @@ grid-column: 3 / 4;
 }
 
 .areas-title .highlight {
-    background-image: url('assets/line.png');
-    background-position-x: -40px;
-    background-size: cover;
+background-image: url(assets/line.png);
+    background-size: contain;
     background-repeat: no-repeat;
-    border-radius: 100 0px;
+    background-position: center;
     padding: 0 5px;
+    color: #000000;
 }
 
 /* === DESCRIPTION === */
@@ -1163,10 +1163,12 @@ grid-column: 3 / 4;
 }
 
 .industries-title .highlight {
-    background-image: url('assets/line.png');
-    background-size: cover;
+background-image: url(assets/line.png);
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
     padding: 0 5px;
+    color: #000000;
 }
 
 .industries-line {
@@ -1413,12 +1415,12 @@ display: flex
 } */
 
 .trends-title .highlight {
-    background-image: url('assets/line.png');
-    background-position: 10px 20px;
-    background-size: cover;
+background-image: url(assets/line.png);
+    background-size: contain;
     background-repeat: no-repeat;
-    padding: 5px 15px;
-    line-height: 1.2;
+    background-position: center;
+    padding: 0 5px;
+    color: #000000;
 }
 
 .trends-line {
