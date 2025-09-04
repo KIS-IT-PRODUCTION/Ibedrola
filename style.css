@@ -1,3 +1,6 @@
+
+
+
 /* ==========================================================================
    1. Загальні стилі, змінні та шрифти
    ========================================================================== */
@@ -446,9 +449,7 @@ body.menu-open .page-overlay {
     }
     
     /* НОВЕ: Змінюємо порядок елементів у хедері */
-    .header-logo {
-        /* order: 1; Логотип стає першим */
-    }
+
     .menu-toggle {
         order: 2; /* Кнопка меню стає другою */
     }
@@ -776,9 +777,10 @@ background-image: url(assets/line.png);
     border-color: #000000; 
 }
 
-.icon .vector {
+.vector {
     width: 24px;
     height: 24px;
+    margin-bottom: 25px;
 }
 
 .icon .text-wrapper {
@@ -1824,5 +1826,665 @@ display: flex
     /* 6. Авторське право: вирівнюємо по лівому краю */
     .footer-copyright {
         text-align: left;
+    }
+}
+
+/* ==========================================================================
+   Стилі для секції Data Processing
+   ========================================================================== */
+
+.data-processing-section {
+    position: relative; /* Необхідно для позиціонування info-card */
+    height: 750px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 50px;
+    border-radius: 50px;
+    margin: 20px;
+    /* !!! ЗАМІНІТЬ НА ВАШЕ ФОТО !!! */
+    background-image: url('assets/data-section.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+/* Використовуємо загальні класи для контенту, щоб перевикористовувати стилі */
+.section-content {
+    position: relative;
+    z-index: 2;
+    max-width: 55%; /* Трохи збільшимо, щоб текст краще компонувався */
+}
+
+.section-title {
+    font-size: 76px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+.section-title .highlight {
+    color: var(--highlight-color); /* З вашого існуючого коду */
+}
+
+.section-subtitle {
+    font-size: 16px;
+    line-height: 1.6; /* Трохи збільшимо для читабельності */
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 80%;
+    margin-bottom: 40px; /* Додамо відступ до кнопки */
+}
+
+/* ==========================================================================
+   ЗМІНИ для інформаційної картки (для позиціонування)
+   ========================================================================== */
+.info-card {
+position: absolute;
+    top: 684px;
+    right: 100px;
+    z-index: 1000;
+    max-width: 620px;
+    padding: 24px;
+background: rgb(255 255 255 / 11%); 
+ backdrop-filter: blur(10px);
+    border: 1px solid rgba(246, 248, 251, 1);
+    border-radius: 16px;
+    display: flex
+;
+    align-items: flex-start;
+    gap: 16px;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+.info-card img {
+    width: 30px;
+    height: 48px;
+    flex-shrink: 0;
+}
+.info-card p {
+    color: #000000;
+    font-size: 24px;
+    line-height: 1.4;
+}
+/* ==========================================================================
+   НОВІ стилі для секції переваг (Benefits Section)
+   ========================================================================== */
+.benefits-section {
+    color: #1a1a1a;
+    padding: 180px 50px 100px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- ЗМІНА: Два фонових зображення замість одного --- */
+
+/* Праве фонове зображення */
+.benefits-section::before {
+content: '';
+    position: absolute;
+    margin-top: 220px;
+    right: -150px;
+    width: 1100px;
+    height: 500px;
+    background-image: url(assets/green-swoosh.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+}
+
+/* Ліве фонове зображення */
+.benefits-section::after {
+content: '';
+    position: absolute;
+    width: 1400px;
+    height: 850px;
+    background-image: url(assets/green-swoosh-left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+    top: -100px;
+    left: -500px;
+}
+
+.benefits-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.benefits-title {
+    font-size: 48px;
+    font-weight: 350;
+    margin-bottom: 60px;
+    max-width: 500px;
+    line-height: 1.3;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* --- ЗМІНА: Оновлений вигляд карток --- */
+.benefit-card {
+    padding: 24px;
+    border-radius: 16px;
+    
+    /* Новий напівпрозорий білий фон, як на дизайні */
+    background: rgb(255 255 255 / 10%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    /* Тонка біла межа для ефекту скла */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05); /* Легка тінь для глибини */
+    
+    overflow: hidden;
+    position: relative;
+    min-height: 390px; /* Збільшимо висоту */
+    display: flex;
+    flex-direction: column;
+}
+vector
+.benefit-icon {
+    margin-bottom: 16px;
+}
+
+.benefit-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.benefit-card p {
+    font-size: 24px;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* --- ЗМІНА: Позиціонування зображення всередині картки --- */
+.benefit-image-wrapper {
+    position: absolute;
+    bottom: -20px; /* Трохи висуваємо вниз */
+    left: 0;
+    width: 100%;
+    z-index: -1; /* Ховаємо за текстом */
+    opacity: 0.7; /* Робимо трохи прозорішим, щоб не заважало тексту */
+}
+
+.benefit-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ==========================================================================
+   Адаптація нової секції
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .benefits-section {
+        padding: 120px 20px 60px 20px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr; /* Складаємо картки в одну колонку */
+        gap: 20px;
+    }
+    
+    .benefits-title {
+        font-size: 36px;
+        max-width: none;
+    }
+    
+    /* Для мобільних пристроїв зміщуємо картку, щоб вона не накладалась дивно */
+    .info-card {
+        bottom: -40px;
+        right: 20px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    /* На малих екранах можна повернути картку всередину її секції */
+    .info-card {
+        position: static;
+        margin: 40px auto 0 auto;
+        width: calc(100% - 40px);
+    }
+    
+    .data-processing-section {
+        padding-bottom: 60px; /* Додамо відступ знизу, коли картка стає статичною */
+    }
+
+    .benefits-section {
+        padding-top: 60px; /* Зменшуємо верхній відступ, оскільки картка більше не висить тут */
+    }
+    
+    .benefits-title {
+        font-size: 32px;
+    }
+}
+
+
+
+/* ==========================================================================
+   НОВІ стилі для секції компетенцій (Competencies Section)
+   ========================================================================== */
+.competencies-section {
+    padding: 100px 50px;
+    background-color: #fff;
+}
+
+.competencies-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-heading {
+font-size: 48px;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin: 0 0 60px 0;
+    line-height: 1.4;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    max-width: 400px;
+    margin-right: 280px;
+}
+
+.section-heading .highlight {
+background-image: url(assets/line.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0 5px;
+    color: #000000;
+    font-weight: 400;
+}
+
+
+.competencies-section .line {
+ width: 50%;
+    height: 1px;
+    background-color: #000;
+    justify-self: center;
+    margin-bottom: 50px;
+}
+
+.competencies-grid {
+    display: grid;
+    /* Чотири колонки для великих екранів */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.competency-card {
+    background-color: #F6F8FB;
+    border-radius: 24px;
+    padding: 32px;
+    border: 1px solid #F0F0F0;
+    min-height: 280px;
+}
+
+.competency-icon {
+    margin-bottom: 24px;
+}
+
+.competency-card h3 {
+    font-size: 24px;
+    font-weight: 'bold';
+    margin: 0 0 80px 0;
+    color: #1a1a1a;
+}
+
+.competency-card p {
+ font-size: 16px;
+    line-height: 1.3;
+    color: #000000;
+    margin: 0;
+    font-weight: 100;
+}
+
+.competency-card p b {
+    color: #1a1a1a; 
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   Адаптація секції компетенцій
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .competencies-grid {
+        /* Дві колонки для планшетів */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .competencies-section {
+        padding: 60px 20px;
+    }
+
+    .section-heading {
+        font-size: 36px;
+    }
+
+    .competencies-grid {
+        /* Одна колонка для мобільних */
+        grid-template-columns: 1fr;
+    }
+
+    .competency-card {
+        padding: 24px;
+        min-height: auto; /* Автоматична висота на мобільних */
+    }
+}
+
+
+/* ==========================================================================
+   НОВІ стилі для секції переваг (Features Section)
+   ========================================================================== */
+.features-section {
+    padding: 120px 50px;
+    background-color: #F6F8FB;
+    position: relative;
+    overflow: hidden;
+}
+
+.features-section .section-heading  {
+font-size: 56px;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin: 0 0 60px 0;
+    line-height: 1.4;
+    max-width: 502px;
+}
+
+
+/* Декоративні фонові елементи */
+.features-section::before {
+content: '';
+    position: absolute;
+    top: 93%;
+    left: -600px;
+    transform: translateY(-50%);
+    width: 1100px;
+    height: 920px;
+    background-image: url(assets/left.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.5;
+}
+
+.features-section::after {
+content: '';
+    position: absolute;
+    top: 50%;
+    right: -150px;
+    transform: translateY(-42%);
+    width: 800px;
+    height: 500px;
+    background-image: url(assets/green-swoosh.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.features-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Ліва колонка трохи вужча */
+    gap: 180px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.features-left .section-heading {
+    margin-bottom: 30px;
+}
+
+/* Стилі для акордеону */
+.accordion {
+    background: linear-gradient(to bottom, #ffffff 50%, rgba(221, 251, 36, 0.15));
+    border-radius: 24px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-item {
+    border-bottom: 1px solid #EAEAEA;
+}
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-transform: lowercase;
+}
+
+.accordion-header .info-card-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.accordion-icon {
+    width: 14px;
+    height: 14px;
+    background-color: #1a1a1a;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.accordion-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.accordion-content p {
+    padding-bottom: 24px;
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+/* Стилі для активного стану акордеону */
+.accordion-item.active .accordion-header {
+    color: #000;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 200px; /* Достатня висота для вмісту */
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(90deg);
+}
+
+/* ==========================================================================
+   Адаптація секції переваг
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .features-container {
+        grid-template-columns: 1fr; /* Складаємо в одну колонку */
+        gap: 40px;
+        text-align: center;
+    }
+    .features-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .features-section {
+        padding: 60px 20px;
+    }
+    .features-section::after { /* Ховаємо зелену пляму на мобільних */
+        display: none;
+    }
+    .accordion {
+        padding: 10px 20px;
+    }
+}
+
+/* ==========================================================================
+   НОВІ стилі для секції "Чому ми" (Love Working Section)
+   ========================================================================== */
+.love-working-section {
+    padding: 120px 50px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Декоративний елемент на фоні */
+.love-working-section::after {
+content: '';
+    position: absolute;
+    top: 64%;
+    right: -140px;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 900px;
+    background-image: url('assets/dispersion glass (4).svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+.love-working-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.love-working-container .section-heading {
+margin-bottom: 40px;
+    padding-top: 40px;
+    justify-self: flex-start;
+    max-width: 560px;
+}
+
+.love-working-content {
+    display: grid;
+    /* Створюємо сітку з 4 колонок */
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.love-working-left p {
+    margin: 0 0 40px 0;
+    padding-right: 20px; /* Невеликий відступ, щоб текст не прилипав */
+    line-height: 1.7;
+    color: #2C313A;
+    font-weight: 200;
+}
+
+.love-working-card {
+background-color: #F7F7F7;
+    border-radius: 24px;
+    padding: 22px;
+    border: 1px solid #F0F0F0;
+    min-height: 310px;
+    position: relative;
+    min-width: 270px;
+}
+
+.love-working-card h3 {
+font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 25px 0;
+    color: #000;
+}
+
+.love-working-card p {
+font-size: 16px;
+    line-height: 1.3;
+    color: #000000;
+    margin: 0;
+    font-weight: 100;
+}
+
+.card-icon {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+  
+}
+
+.card-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+
+/* ==========================================================================
+   Адаптація секції "Чому ми"
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .love-working-content {
+        /* Дві колонки для планшетів */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .love-working-left {
+        grid-column: 1 / -1; /* Лівий блок займає всю ширину */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .love-working-section {
+        padding: 60px 20px;
+    }
+    .love-working-content {
+        /* Одна колонка для мобільних */
+        grid-template-columns: 1fr;
     }
 }

@@ -39,6 +39,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+     const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            const accordionItem = this.parentElement;
+            
+            // Якщо елемент вже активний, просто закриваємо його
+            if (accordionItem.classList.contains('active')) {
+                accordionItem.classList.remove('active');
+            } else {
+                // Інакше закриваємо всі інші...
+                accordionHeaders.forEach(otherHeader => {
+                    otherHeader.parentElement.classList.remove('active');
+                });
+                // ... і відкриваємо поточний
+                accordionItem.classList.add('active');
+            }});
+    });
     // --- Універсальна логіка для всіх слайдерів ---
     
     // Знаходимо всі секції, які містять слайдери
