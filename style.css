@@ -260,7 +260,11 @@ body.menu-open .page-overlay {
     letter-spacing: -1.76px;
     color: #000000;
 }
+.menu-navigation a:hover {
+    font-family: "Inter", sans-serif;
+    color: #00000090;
 
+}
 .menu-navigation .has-dropdown {
     position: relative;
 }
@@ -304,7 +308,7 @@ body.menu-open .page-overlay {
 }
 
 .dropdown-menu a:hover {
-    color: var(--dark-bg);
+color: var(--highlight-color);
 }
 
 .dropdown-menu.industry-dropdown {
